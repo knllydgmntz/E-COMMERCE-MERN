@@ -3,9 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ["Poppins", "sans-serif"],
-      // },
       colors: {
         primary: "#f0f2f5",
         secondary: "#ff813f",
@@ -26,7 +23,7 @@ export default {
         },
       },
       backgroundImage: {
-        hero: "url('/src/assets/bgecom.png')",
+        hero: "url('/src/assets/2.jpg')",
         banneroffer: "url('/src/assets/banneroffer.png')",
       },
       screens: {

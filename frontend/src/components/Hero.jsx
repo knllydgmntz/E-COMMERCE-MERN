@@ -8,24 +8,27 @@ const Hero = () => {
   return (
     <section className="relative bg-hero bg-cover bg-center bg-no-repeat h-screen w-full">
       <div className="max_padd_container relative top-32 xs:top-52">
-        <h1 className="h1 capitalize max-w-[37rem]">
+        <h1 className="h1 capitalize max-w-[37rem] text-white">
           Digital Shopping Hub Junction
         </h1>
-        <p className="text-gray-50 regular-16 mt-6 max-w-[33rem]">
+        {/* text-gray-50 */}
+        <p className=" regular-16 mt-6 max-w-[33rem] text-white ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum vel
           dolores nostrum quam minima placeat ad illum perferendis itaque
           accusantium?
         </p>
         <div className="flexStart !items-center gap-x-4 my-10">
-          <div className="!regular-24 flexCenter gap-x-3">
+          <div className="!regular-24 flexCenter gap-x-3 text-white">
             <FaStar />
             <FaStar />
             <FaStar />
             <FaStar />
           </div>
-          <div className="bold-16 sm:bold-20">
+          <div className="bold-16 sm:bold-20 text-white">
             69k{" "}
-            <span className="regular-16 sm:regular-20">Excellent Reviews</span>
+            <span className="regular-16 sm:regular-20 text-white">
+              Excellent Reviews
+            </span>
           </div>
         </div>
         <div className="max-xs-:flex-col flex gap-2">
