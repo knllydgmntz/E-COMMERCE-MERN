@@ -6,7 +6,7 @@ const Item = ({ id, name, image, new_price, old_price }) => {
     <div className="rounded-xl overflow-hidden shadow-lg">
       <div className="relative flexCenter group overflow-hidden transition-all duration-100">
         <Link
-          to={`product/${id}`}
+          to={`/product/${id}`}
           className="h-12 w-12 bg-white rounded-full flexCenter absolute top-1/2 bottom-1/2 !py-2 z-20 scale-0 group-hover:scale-100 transistion-all duration-700"
         >
           <FaSearch className="scale-125 hover:rotate-90 hover:scale-125 transition-all duration-200" />
