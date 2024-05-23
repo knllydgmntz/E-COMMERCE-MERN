@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { MdCategory, MdContacts, MdHomeFilled, MdShop2 } from "react-icons/md";
+// icons
+
+import { GrRestroomWomen } from "react-icons/gr";
+import { IoMan } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
+import { TbMoodKidFilled } from "react-icons/tb";
 
 const Navbar = ({ containerStyles }) => {
   return (
@@ -9,7 +14,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdHomeFilled />
+          <FaHome />
           Home
         </div>
       </NavLink>
@@ -18,7 +23,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdCategory />
+          <IoMan />
           Men's
         </div>
       </NavLink>
@@ -27,7 +32,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdShop2 />
+          <GrRestroomWomen />
           Women's
         </div>
       </NavLink>
@@ -36,7 +41,7 @@ const Navbar = ({ containerStyles }) => {
         className={({ isActive }) => (isActive ? "active_link" : "")}
       >
         <div className="flexCenter gap-x-1">
-          <MdContacts />
+          <TbMoodKidFilled />
           Kid's
         </div>
       </NavLink>

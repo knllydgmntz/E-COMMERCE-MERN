@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
 //  logo & images
 // import logo from "../assets/logo.svg";
 import logo1 from "../assets/logo1.svg";
 import logout from "../assets/logout.svg";
 import user from "../assets/user.svg";
 
-import Navbar from "./Navbar";
 //  icons
-import { useState } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import { FaOpencart } from "react-icons/fa";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -51,7 +51,7 @@ const Header = () => {
           )}
           <div className="flexBetween sm:gap-x-6">
             <NavLink to={"cart-page"} className={"flex"}>
-              <FaOpencart className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
+              <TiShoppingCart className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
               <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">
                 0
               </span>

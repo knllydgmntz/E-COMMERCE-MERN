@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import FOOTER_LINKS from "../assets/footer_links";
 import FOOTER_CONTACT_INFO from "../assets/footer_contact";
 import SOCIALS from "../assets/socials";
+// import logo1 from "../assets/logo1.svg";
 
 const Footer = () => {
   return (
@@ -9,7 +10,8 @@ const Footer = () => {
       <div className="max_padd_container flex w-full flex-col gap-14">
         <div className="flex flex-col items-start justify-center gap-[10%] md:flex-row">
           <Link to="/" className="mb-10 bold-20">
-            Shoppee
+            {/* <img src={logo1} alt="logoImg" className="h-[90px] w-[90px]" /> */}
+            RICHSPIRIT
           </Link>
           <div className="flex flex-wrap gap-8 sm:justify-between md:flex-1">
             {FOOTER_LINKS.map((col) => (
@@ -52,7 +54,7 @@ const Footer = () => {
         </div>
         <div className="border bg-gray-20"></div>
         <p className="text-center regular-14 text-gray-30">
-          2024 Shoppee | All rights reserved.
+          2024 &copy; RICHSPIRIT | All rights reserved.
         </p>
       </div>
     </footer>
