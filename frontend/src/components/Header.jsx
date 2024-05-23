@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 //  logo & images
-import logo from "../assets/logo.svg";
+// import logo from "../assets/logo.svg";
+import logo1 from "../assets/logo1.svg";
 import logout from "../assets/logout.svg";
 import user from "../assets/user.svg";
 
@@ -20,7 +21,7 @@ const Header = () => {
         {/* logo */}
         <div>
           <Link>
-            <img src={logo} alt="logo" height={66} width={88} />
+            <img src={logo1} alt="logo" height={66} width={88} />
           </Link>
         </div>
         {/* navbar desktop */}
