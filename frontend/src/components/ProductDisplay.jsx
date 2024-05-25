@@ -1,18 +1,22 @@
+// context
+import React, { useContext } from "react";
 import product_rt_1 from "../assets/product_rt_1.png";
 import product_rt_2 from "../assets/product_rt_2.png";
 import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
 // icon
 import { MdStar } from "react-icons/md";
+import { ShopContext } from "../context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const { addToCart } = useContext(ShopContext);
 
   return (
     <section>
-      <div className="felx flex-col gap-14 xl:flex-row">
+      <div className="flex flex-col gap-14 xl:flex-row">
         {/* left side */}
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 xl:flex-1">
           <div className="flex flex-col gap-[7px] flex-wrap">
             <img src={product_rt_1} alt="productImg" className="max-h-[99px]" />
             <img src={product_rt_2} alt="productImg" className="max-h-[99px]" />
@@ -24,7 +28,8 @@ const ProductDisplay = (props) => {
           </div>
         </div>
         {/* right side */}
-        <div className="flex-col flex">
+        {/* flex 1.5 */}
+        <div className="flex-col flex xl:flex-[2.0]">
           <h3 className="h3">{product.name}</h3>
           <div className="flex gap-x-2 text-secondary medium-22">
             <MdStar />
@@ -54,7 +59,12 @@ const ProductDisplay = (props) => {
               </div>
             </div>
             <div className="flex flex-col gap-y-3 mb-4 max-w-[555px]">
-              <button className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">
+              <button
+                onClick={() => {
+                  addToCart(product.id);
+                }}
+                className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest"
+              >
                 Add to cart
               </button>
               <button className="btn_dark_rounded !rounded-none uppercase regular-14 tracking-widest">
@@ -62,11 +72,11 @@ const ProductDisplay = (props) => {
               </button>
             </div>
             <p>
-              <span className="medium-16 text-tertiary">Category:</span> Women |
-              Jacket | Winter
+              <span className="medium-16 text-tertiary">Category :</span> Women
+              | Jacket | Winter
             </p>
             <p>
-              <span className="medium-16 text-tertiary">Tags:</span> Modern |
+              <span className="medium-16 text-tertiary">Tags :</span> Modern |
               Latest
             </p>
           </div>

@@ -83,6 +83,8 @@
   }
 
   /* 1440px */
+  /* 1980 */
+  /* [1680px] */
   .max_padd_container {
     @apply mx-auto max-w-[1680px] px-6 lg:px-20 3xl:px-0;
   }
