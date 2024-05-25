@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 //  logo & images
@@ -10,10 +10,12 @@ import user from "../assets/user.svg";
 //  icons
 import { MdClose, MdMenu } from "react-icons/md";
 import { TiShoppingCart } from "react-icons/ti";
+import { ShopContext } from "../context/ShopContext";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const toggleMenu = () => setMenuOpened(!menuOpened);
+  const { getTotalCartItems } = useContext(ShopContext);
 
   return (
     <header className="fixed top-0 left-0 m-auto mx-auto max-w-full px-6 lg:px-20 3xl:px-0 w-full bg-white ring-1 ring-slate-900/5 z-10">
@@ -53,7 +55,7 @@ const Header = () => {
             <NavLink to={"cart-page"} className={"flex"}>
               <TiShoppingCart className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
               <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">
-                0
+                {getTotalCartItems()}
               </span>
             </NavLink>
             {/* <NavLink
