@@ -1,5 +1,7 @@
-const listProduct = () => {
-  return <div>listProduct</div>;
+import React from "react";
+
+const ListProduct = () => {
+  return <div>ListProduct</div>;
 };
 
-export default listProduct;
+export default ListProduct;
