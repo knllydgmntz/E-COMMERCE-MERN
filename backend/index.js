@@ -41,7 +41,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
   });
 });
 
-// Schema for creating products
+// Schema for creating "products"
 const Product = mongoose.model("Product", {
   id: {
     type: Number,
@@ -123,6 +123,29 @@ app.get("/allproducts", async (req, res) => {
   console.log("All products fetched");
   res.send(products);
 });
+
+// Schema "USER" model
+const User = mongoose.model("User", {
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  password: {
+    type: String,
+  },
+  carData: {
+    type: Object,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// creating endpoint for registering the user
 
 app.listen(port, (error) => {
   if (!error) {
